@@ -1,0 +1,365 @@
+
+*{
+    border: 0;
+    margin: 0;
+    font-size: 25px;
+    color: #fff;
+  }
+    
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 1000px;
+    background-color:royalblue;
+    position: relative;
+  }
+  
+  
+  .form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 350px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      position: relative;
+      margin: 100;
+      margin-left: 0;
+      margin-top:0;
+    }
+    
+    .title {
+      font-size: 28px;
+      color: royalblue;
+      font-weight: 600;
+      letter-spacing: -1px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+    }
+    
+    .title::before,.title::after {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      left: 0px;
+      background-color: royalblue;
+    }
+    
+    .title::before {
+      width: 18px;
+      height: 18px;
+      background-color: royalblue;
+    }
+    
+    .title::after {
+      width: 18px;
+      height: 18px;
+      animation: pulse 1s linear infinite;
+    }
+    
+    .message, .signin {
+      color: rgba(88, 87, 87, 0.822);
+      font-size: 14px;
+    }
+    
+    .signin {
+      text-align: center;
+    }
+    
+    .signin a {
+      color: royalblue;
+    }
+    
+    .signin a:hover {
+      text-decoration: underline royalblue;
+    }
+    
+    .flex {
+      display: flex;
+      width: 100%;
+      gap: 6px;
+    }
+    
+    .form label {
+      position: relative;
+    }
+    
+    .form label .input {
+      width: 100%;
+      padding: 10px 10px 20px 10px;
+      outline: 0;
+      border: 1px solid rgba(105, 105, 105, 0.397);
+      border-radius: 10px;
+    }
+    
+    .form label .input + span {
+      position: absolute;
+      left: 10px;
+      top: 15px;
+      color: grey;
+      font-size: 0.9em;
+      cursor: text;
+      transition: 0.3s ease;
+    }
+    
+    .form label .input:placeholder-shown + span {
+      top: 15px;
+      font-size: 0.9em;
+    }
+    
+    .form label .input:focus + span,.form label .input:valid + span {
+      top: 30px;
+      font-size: 0.7em;
+      font-weight: 600;
+    }
+    
+    .form label .input:valid + span {
+      color: green;
+    }
+    
+    .submit {
+      border: none;
+      outline: none;
+      background-color: royalblue;
+      padding: 10px;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 16px;
+      transform: .3s ease;
+    }
+    
+    .submit:hover {
+      background-color: rgb(56, 90, 194);
+    }
+    
+    @keyframes pulse {
+      from {
+        transform: scale(0.9);
+        opacity: 1;
+      }
+    
+      to {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+    }
+    
+  .check {
+      cursor: poin8ter;
+      position: relative;
+      margin: auto;
+      width: 18px;
+      height: 18px;
+      -webkit-tap-highlight-color: transparent;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .check:before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(34,50,84,0.03);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    
+    .check svg {
+      position: relative;
+      z-index: 1;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke: #c8ccd4;
+      stroke-width: 1.5;
+      transform: translate3d(0, 0, 0);
+      transition: all 0.2s ease;
+    }
+    
+    .check svg path {
+      stroke-dasharray: 60;
+      stroke-dashoffset: 0;
+    }
+    
+    .check svg polyline {
+      stroke-dasharray: 22;
+      stroke-dashoffset: 66;
+    }
+    
+    .check:hover:before {
+      opacity: 1;
+    }
+    
+    .check:hover svg {
+      stroke: #4285f4;
+    }
+    
+    #cbx:checked + .check svg {
+      stroke: #4285f4;
+    }
+    
+    #cbx:checked + .check svg path {
+      stroke-dashoffset: 60;
+      transition: all 0.3s linear;
+    }
+    
+    #cbx:checked + .check svg polyline {
+      stroke-dashoffset: 42;
+      transition: all 0.2s linear;
+      transition-delay: 0.15s;
+    }
+    
+  
+  
+  
+    .card {
+      width: 190px;
+      height: 254px;
+      transition: all 0.2s;
+      position: relative;
+      cursor: pointer;
+      margin-left: 50;
+    }
+    
+    .card-inner {
+      width: inherit;
+      height: inherit;
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.25);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 200;
+    }
+  
+    .card:hover {
+      transform: scale(1.04) rotate(1deg);
+    }
+    .card1 {
+      width: 190px;
+      height: 254px;
+      transition: all 0.2s;
+      position: relative;
+      cursor: pointer;
+      margin-left: 120;
+    }
+    
+    .card1-inner {
+      width: inherit;
+      height: inherit;
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.25);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 350;
+    }
+    
+   
+  
+  
+    
+    .card1:hover {
+      transform: scale(1.04) rotate(1deg);
+    }
+    .card2 {
+      width: 190px;
+      height: 254px;
+      transition: all 0.2s;
+      position: relative;
+      cursor: pointer;
+      margin-left:120;
+    }
+    .input {
+      display: flex;
+    }
+    .card2-inner {
+      width: inherit;
+      height: inherit;
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.25);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 200;
+    }
+    
+  
+    
+    .card2:hover {
+      transform: scale(1.04) rotate(1deg);
+    }
+    
+    .circle {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(royalblue, royalblue);
+      border-radius: 50%;
+      position: absolute;
+      animation: move-up6 2s ease-in infinite alternate-reverse;
+      margin-top: 435;
+      margin-left: 155;
+    }
+    .circle1 {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(royalblue, royalblue);
+      border-radius: 50%;
+      position: absolute;
+      animation: move-up6 2s ease-in infinite alternate-reverse;
+      margin-top:120;
+      margin-left:-40;
+    }
+    
+    .circle:nth-child(1) {
+      top: -25px;
+      left: -25px;
+    }
+    
+    .circle:nth-child(2) {
+      bottom: -25px;
+      right: -25px;
+      animation-name: move-down1;
+    }
+    .circle1:nth-child(1) {
+      top: -25px;
+      left:-10px;
+    }
+    
+    .circle1:nth-child(2) {
+      bottom:5px;
+      animation-name: move-down1;
+    }
+    
+    @keyframes move-up6 {
+      to {
+        transform: translateY(-10px);
+      }
+    }
+    
+    @keyframes move-down1 {
+      to {
+        transform: translateY(10px);
+      }
+    }
+  .buttons{
+      text-align: center;
+      margin-top: 60%;
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.25);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      border-color:rgba(255,255,255,.05);
+      font-size: 20px;
+      color: rgb(39, 68, 154);
+  }

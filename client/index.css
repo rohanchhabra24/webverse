@@ -1,3 +1,22 @@
+
+*{
+  border: 0;
+  margin: 0;
+  font-size: 25px;
+  color: #fff;
+}
+  
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  width: 1000px;
+  background-color:royalblue;
+  position: absolute;
+}
+
+
 .form {
     display: flex;
     flex-direction: column;
@@ -7,6 +26,9 @@
     padding: 20px;
     border-radius: 20px;
     position: relative;
+    margin: 100;
+    margin-left: 0;
+    margin-top:0;
   }
   
   .title {
@@ -196,6 +218,10 @@
     transition: all 0.2s linear;
     transition-delay: 0.15s;
   }
+  
+
+
+
   .card {
     width: 190px;
     height: 254px;
@@ -215,12 +241,62 @@
     text-align: center;
     margin-top: 200;
   }
+
+  .card:hover {
+    transform: scale(1.04) rotate(1deg);
+  }
+  .card1 {
+    width: 190px;
+    height: 254px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+    margin-left: 120;
+  }
+  
+  .card1-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 350;
+  }
   
  
 
 
   
-  .card:hover {
+  .card1:hover {
+    transform: scale(1.04) rotate(1deg);
+  }
+  .card2 {
+    width: 190px;
+    height: 254px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+    margin-left:120;
+  }
+  .input {
+    display: flex;
+  }
+  .card2-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 200;
+  }
+  
+
+  
+  .card2:hover {
     transform: scale(1.04) rotate(1deg);
   }
   
@@ -231,6 +307,18 @@
     border-radius: 50%;
     position: absolute;
     animation: move-up6 2s ease-in infinite alternate-reverse;
+    margin-top: 435;
+    margin-left: 155;
+  }
+  .circle1 {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(royalblue, royalblue);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+    margin-top:120;
+    margin-left:-40;
   }
   
   .circle:nth-child(1) {
@@ -241,6 +329,15 @@
   .circle:nth-child(2) {
     bottom: -25px;
     right: -25px;
+    animation-name: move-down1;
+  }
+  .circle1:nth-child(1) {
+    top: -25px;
+    left:-10px;
+  }
+  
+  .circle1:nth-child(2) {
+    bottom:5px;
     animation-name: move-down1;
   }
   
@@ -255,7 +352,7 @@
       transform: translateY(10px);
     }
   }
-.card-inner > .buttons{
+.buttons{
     text-align: center;
     margin-top: 60%;
     background: rgba(255,255,255,.05);
